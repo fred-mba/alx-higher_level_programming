@@ -2,8 +2,9 @@
 """
 This is the "Square"  module.
 
-This module provides a simple Square class with initialize size.
-Size defaults to 0. Raise errors on invalid inputs.
+Provides a simple Square class with initialize size.
+if size is less than 0, raise a ValueError exception with
+the message size must be >= 0
 """
 
 
