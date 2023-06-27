@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""This is a class MagicClass"""
 import dis
 import math
 
