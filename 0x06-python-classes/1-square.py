@@ -3,6 +3,7 @@
 This is the "Square"  module.
 
 The module provides a simple Square class with initialize size.
+
 """
 
 class Square:
