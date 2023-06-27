@@ -1,9 +1,17 @@
 #!/usr/bin/python3
+"""
+"Square" class module.
+
+The module provides a simple Square class with initialize size.
+Public instance method: def area(self): that returns the current square area.
+Public instance method: def my_print(self): that prints in
+stdout the square with the character #.
+"""
 
 
 class Square:
-    """A class that defines a square by size and position."""
-
+    """A class that defines a square by size, which defaults 0.
+    """
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
@@ -14,7 +22,7 @@ class Square:
 
     @size.setter
     def size(self, size):
-        if not isinstance(size, int):
+        if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
@@ -26,9 +34,9 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if not isinstance(value, tuple) or len(value) != 2 or \
-           not all(isinstance(i, int) for i in value) or \
-           not all(i >= 0 for i in value):
+        if type(value) != tuple or len(value) != 2 or \
+           not all([type(i) == int for i in value]) or \
+           not all([i >= 0 for i in value]):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -36,11 +44,11 @@ class Square:
         return self.__size * self.__size
 
     def my_print(self):
-        if self.__size == 0:
+        if self.__size is 0:
             print("")
             return
-        for _ in range(self.__position[1]):
+        for i in range(self.__position[1]):
             print("")
-        for _ in range(self.__size):
+        for i in range(self.__size):
             print(" " * self.__position[0], end="")
             print("#" * self.__size)
