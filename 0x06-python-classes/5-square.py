@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-The "Square"  module.
+"Square" module definition.
 
-It provides a simple Square class with initialize size.
+This module provides a simple Square class with initialize size.
 Public instance method: def area(self): that returns the 
 current square area.
 Public instance method: def my_print(self): that prints in
