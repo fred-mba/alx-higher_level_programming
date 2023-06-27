@@ -4,10 +4,9 @@ The "Square"  module.
 
 It provides a simple Square class with initialize size.
 Public instance method: def area(self): that returns the 
-current square area
+current square area.
 Public instance method: def my_print(self): that prints in
-stdout the square with the character #:
-if size is equal to 0, print an empty line
+stdout the square with the character "#".
 """
 
 
