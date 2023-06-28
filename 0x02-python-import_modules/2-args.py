@@ -17,5 +17,4 @@ def main():
         print('{}: {}'.format(i + 1, arg))
 if __name__ == "__main__":
 
-
     main()
