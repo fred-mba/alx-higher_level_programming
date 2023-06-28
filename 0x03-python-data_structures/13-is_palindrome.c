@@ -1,94 +1,83 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
- * is_palindrome - checks if it is a palindrome
- * @head: pointer-pointer to head
- * Return: 1 if true, 0 if false
- */
+  * is_palindrome - checks if a singly linked list is a palindrome
+  * @head: the head of the singly linked list
+  *
+  * Return: 0 if it is not a palindrome, 1 if it is a palindrome
+  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow = *head, *fast = *head, *prev = *head;
-	listint_t *second = NULL, *mid = NULL;
-	int res = 0;
+    listint_t *start = NULL, *end = NULL;
+    unsigned int i = 0, len = 0, len_cyc = 0, len_list = 0;
 
-	if (!fast || !fast->next)
-		return (1);
+    if (head == NULL)
+        return (0);
 
-	while (fast && fast->next)
-	{
-		fast = fast->next->next;
-		prev = slow;
-		slow = slow->next;
-	}
+    if (*head == NULL)
+        return (1);
+    
+    start = *head;
+    len = listint_len(start);
+    len_cyc = len * 2;
+    len_list = len_cyc - 2;
+    end = *head;
 
-	if (fast)
-	{
-		mid = slow;
-		slow = slow->next;
-	}
+    for (; i < len_cyc; i = i + 2)
+    {
+        if (start[i].n != end[len_list].n)
+            return (0);
 
-	second = slow;
-	prev->next = NULL;
-	reverse_linked_list(&second);
-	res = compare_linked_list(*head, second);
-	reverse_linked_list(&second);
+        len_list = len_list - 2;
+    }
 
-	if (mid)
-	{
-		prev->next = mid;
-		mid->next = second;
-	}
-	else
-		prev->next = second;
-
-	return (res);
+    return (1);
 }
 
 /**
- * reverse_linked_list - reverses the linked list
- * @head: double pointer to the head of list
- */
-void reverse_linked_list(listint_t **head)
+  * get_nodeint_at_index - Gets a node from a linked list
+  * @head: the head of the linked list
+  * @index: the index to find in the linked list
+  *
+  * Return: the specific node of the linked list
+  */
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *prev = NULL;
-	listint_t *current = *head;
-	listint_t *next;
+	listint_t *current = head;
+	unsigned int iter_times = 0;
 
-	while (current)
+	if (head)
 	{
-		next = current->next;
-		current->next = prev;
-		prev = current;
-		current = next;
-	}
-
-	*head = prev;
-}
-
-/**
- * compare_linked_list - compares two linked lists
- * @head1: pointer to head of 1st list
- * @head2: pointer to head of 2nd list
- * Return: 1 if true, 0 if false
- */
-int compare_linked_list(listint_t *head1, listint_t *head2)
-{
-	listint_t *temp1 = head1;
-	listint_t *temp2 = head2;
-
-	while (temp1 && temp2)
-	{
-		if (temp1->n == temp2->n)
+		while (current != NULL)
 		{
-			temp1 = temp1->next;
-			temp2 = temp2->next;
+			if (iter_times == index)
+				return (current);
+
+			current = current->next;
+			++iter_times;
 		}
-		else
-			return (0);
 	}
 
-	if (temp1 == NULL && temp2 == NULL)
-		return (1);
+	return (NULL);
+}
 
-	return (0);
+/**
+  * slistint_len - counts the number of elements in a linked list
+  * @h: the linked list to count
+  *
+  * Return: number of elements in the linked list
+  */
+size_t listint_len(const listint_t *h)
+{
+	int lenght = 0;
+
+	while (h != NULL)
+	{
+		++lenght;
+		h = h->next;
+	}
+
+	return (lenght);
 }
