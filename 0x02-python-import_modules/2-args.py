@@ -14,5 +14,4 @@ def main():
     for i, arg in enumerate(args):
         print('{}: {}'.format(i + 1, arg))
 if __name__ == "__main__":
-
     main()
