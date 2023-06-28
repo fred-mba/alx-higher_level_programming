@@ -3,7 +3,7 @@
 
 def add_tuple(tuple_a=(), tuple_b=()):
     """
-    Adds two tuples and returns a new tuple with the sums of 
+    Adds two tuples and returns a new tuple with the sums of
     corresponding elements.
     """
     tuple_a = tuple_a + (0, 0)[:2 - len(tuple_a)]
