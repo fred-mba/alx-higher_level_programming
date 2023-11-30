@@ -13,8 +13,8 @@ def print_arguments():
         print("{} arguments:".format(arg_num))
 
     if arg_num > 0:
-        for i in range(1, len(sys.argv)):
-            print(f"{i}: {sys.argv[i]}")
+        for i, argv in enumerate(sys.argv[1:], start=1):
+            print(f"{i}: {argv}")
 
 
 if __name__ == "__main__":
