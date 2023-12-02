@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-assert "#python is cool"
+exit("#python is cool")
