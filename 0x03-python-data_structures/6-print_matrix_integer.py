@@ -4,8 +4,8 @@ def print_matrix_integer(matrix=[[]]):
     A function that prints a matrix of integers
     """
     for row in matrix:
-        for idx, element in enumerate(row):
-            print("{:d}".format(element), end="")
+        for idx in range(len(row)):
+            print("{:d}".format(row[idx]), end="")
 
             if idx < len(row) - 1:
                 print(", ", end="")
