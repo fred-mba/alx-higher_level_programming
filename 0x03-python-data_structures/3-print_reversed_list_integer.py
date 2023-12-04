@@ -2,5 +2,8 @@
 
 
 def print_reversed_list_integer(my_list=[]):
-    rev_list = my_list[::-1]
-    print(rev_list)
+    if my_list is None:
+        return
+
+    for element in reversed(my_list):
+        print("{}".format(element))
