@@ -1,4 +1,4 @@
-``/usr/bin/python3
+#!/usr/bin/python3
 """
 Defines a rectangle by private instance attribute width
 
