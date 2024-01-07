@@ -29,3 +29,39 @@ OverflowError: cannot convert float infinity to integer
 Traceback (most recent call last):
 ...
 ValueError: cannot convert float NaN to integer
+>>> add_integer(0, [1, 2, 3])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(0, [1, 2, 3])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(True, 2)
+3
+>>> add_integer(2, False)
+2
+>>> add_integer(None, 1)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(1, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(None, None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer("17", 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(2, "17")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer([1], [2, 3])
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
