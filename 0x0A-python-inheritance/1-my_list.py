@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Mylist module that inherits from list"""
+
+
 class MyList(list):
     def print_sorted(self):
         """prints the list, but sorted (ascending sort)"""
