@@ -8,5 +8,5 @@ def read_file(filename=""):
     """Function does not need to manage file permission or file
         doesn't exist exceptions"""
     with open(filename, encoding='utf-8') as file:
-        content = file.read()
-        print(content)
+        for chars in file:
+            print(chars, end="")
