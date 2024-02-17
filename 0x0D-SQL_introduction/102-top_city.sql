@@ -1,6 +1,7 @@
--- From imported temperatures db, this script that displays the max 
-  -- temperature of each state (ordered by State name)
-SELECT state MAX(value) AS max_temp
+-- From imported temperatures db, this script displays the top 3 of
+  -- cities temperature during July and August ordered by temperature (descending)
+SELECT city, AVG(value) AS avg_temp
 FROM temperatures
-GROUP BY state
-ORDER BY `state` ASC;
+WHERE months = 7 OR months = 8
+ORDER BY avg_temp DESC
+LIMIT 3
