@@ -3,7 +3,6 @@
 -- (but the id can be different, as per the example)
 -- Results must be sorted in ascending order by cities.id
 -- Not allowed to use the JOIN keyword
-USE hbtn_0d_usa;
 SELECT `id`, `name` FROM `cities`
 WHERE `state_id` = (
     SELECT `id` FROM `states`
