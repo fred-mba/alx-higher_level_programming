@@ -6,4 +6,5 @@ is called first_name
 
 
 class LockedClass:
+    """LockedClass representation"""
     __slots__ = ("first_name",)
