@@ -20,7 +20,8 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
 
     for num, name in zip([a, b], ['a', 'b']):
-        if isinstance(a, (list, tuple, str)) or isinstance(b, (list, tuple, str)):
+        if isinstance(a, (list, tuple, str)) or \
+                isinstance(b, (list, tuple, str)):
             raise TypeError("{} must be an integer".format(name))
 
     return int(a) + int(b)
