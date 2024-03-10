@@ -1,0 +1,2 @@
+0
+print("I") involves printing string literals not integers. Therefore, not `int` objects are created or manupulated
