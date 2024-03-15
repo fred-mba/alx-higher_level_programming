@@ -1,7 +1,5 @@
 #!/usr/bin/node
 
-const { type } = require('os');
-
 const myObject = {
   type: 'object',
   value: 12
