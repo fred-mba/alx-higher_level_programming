@@ -16,3 +16,5 @@
 - What are the arithmetic operators and how to use them
 - How to manipulate dictionary
 - How to import a file
+
+ - In JavaScript, arrow functions do not have their own `this` binding; instead, they inherit this from the surrounding lexical context.
