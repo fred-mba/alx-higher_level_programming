@@ -8,28 +8,24 @@ import sys
 
 
 def list_cities_by_state(username, password, database_name, state_name):
-    try:
-        db = MySQLdb.connect(host='localhost', port=3306,
-                             user=username, passwd=password, db=database_name)
-        cursor = db.cursor()
+    db = MySQLdb.connect(
+        host='localhost', port=3306, user=username, passwd=password,
+        db=database_name)
+    cursor = db.cursor()
 
-        mysqlQuery = "SELECT cities.id, cities.name, states.name FROM cities\
-        JOIN states ON cities.state_id = states.id WHERE states.name = %s\
-            ORDER BY cities.id ASC"
+    mysqlQuery = "SELECT cities.id, cities.name, states.name FROM cities\
+    JOIN states ON cities.state_id = states.id WHERE states.name = %s\
+        ORDER BY cities.id ASC"
 
-        cursor.execute(mysqlQuery, (state_name,))
+    cursor.execute(mysqlQuery, (state_name,))
 
-        cities = cursor.fetchall()
+    cities = cursor.fetchall()
 
-        for city in cities:
-            print(city)
+    for city in cities:
+        print(city)
 
-        cursor.close()
-        db.close()
-
-    except MySQLdb.Error as err:
-        print(err)
-        sys.exit(1)
+    cursor.close()
+    db.close()
 
 
 if __name__ == "__main__":
