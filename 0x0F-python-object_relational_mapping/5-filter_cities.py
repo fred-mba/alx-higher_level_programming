@@ -4,39 +4,26 @@ Takes in the name of a state as an argument and lists all cities of that state,
 using the database hbtn_0e_4_usa
 """
 import MySQLdb
-import sys
+from sys import argv
 
 
-def list_cities_by_state(username, password, database_name, state_name):
-    db = MySQLdb.connect(
-        host='localhost', port=3306, user=username, passwd=password,
-        db=database_name)
+if __name__ == '__main__':
+    db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
+
     cursor = db.cursor()
 
-    mysqlQuery = "SELECT cities.id, cities.name, states.name FROM cities\
-    JOIN states ON cities.state_id = states.id WHERE states.name = %s\
-        ORDER BY cities.id ASC"
+    mysqlquery = """
+    SELECT cities.name
+    FROM cities
+    JOIN states
+        ON cities.state_id = states.id
+    WHERE states.name = %s
+    ORDER BY cities.id
+    """
 
-    cursor.execute(mysqlQuery, (state_name,))
+    cursor.execute(mysqlquery, (argv[4],))
 
-    cities = cursor.fetchall()
+    row_cities = cursor.fetchall()
 
-    for city in cities:
-        print(city)
-
-    cursor.close()
-    db.close()
-
-
-if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: python script.py <username> <password> <database>\
-              <state_name>")
-        sys.exit(1)
-
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-    state_name = sys.argv[4]
-
-    list_cities_by_state(username, password, database, state_name)
+    cities = ', '.join(city[0] for city in row_cities)
+    print(cities)
