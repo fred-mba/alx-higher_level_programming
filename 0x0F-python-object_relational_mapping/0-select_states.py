@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """This module lists all states"""
 import MySQLdb
-import sys
+from sys import argv
 
-
-def list_states(username, password, database):
-    """Function to connect to mysql server"""
+if __name__ == '__main__':
     db = MySQLdb.connect(
-        host="localhost", port=3306, user=username,
-        passwd=password, db=database)
+        host="localhost", port=3306, user=argv[1],
+        passwd=argv[2], db=argv[3])
 
     cursor = db.cursor()
 
@@ -20,8 +18,3 @@ def list_states(username, password, database):
         print(state)
 
     db.close()
-
-
-if __name__ == '__main__':
-    username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
-    list_states(username, password, database)
