@@ -9,6 +9,6 @@
 - How to fetch JSON resources
 - How to manipulate data from an external service
 
-[HOWTO Fetch Internet Resources Using urllib Package](https://docs.python.org/3/howto/urllib2.html)
-[Quickstart with Requests package](https://requests.readthedocs.io/en/latest/)
-[Requests package](https://pypi.org/project/requests/)
+- [HOWTO Fetch Internet Resources Using urllib Package](https://docs.python.org/3/howto/urllib2.html)
+- [Quickstart with Requests package](https://requests.readthedocs.io/en/latest/)
+- [Requests package](https://pypi.org/project/requests/)
