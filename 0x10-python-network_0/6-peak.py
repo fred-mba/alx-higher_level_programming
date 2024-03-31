@@ -3,6 +3,12 @@
 
 
 def find_peak(list_of_integers):
+    """
+    The algorithm finds the length & mid of list then
+    it compares the items on the left and right from the mid
+    to obtain the heighest value(peak)
+    Note: there may be more than one peak in the list
+    """
     n = len(list_of_integers)
 
     if n == 0:
