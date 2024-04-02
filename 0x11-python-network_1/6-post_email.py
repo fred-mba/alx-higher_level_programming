@@ -3,8 +3,6 @@
  Takes in a URL and an email address, sends a POST request to the passed URL
  with the email as a parameter, and displays the body of the response.
 """
-from urllib import response
-from xml.sax.handler import DTDHandler
 import requests
 from sys import argv
 
