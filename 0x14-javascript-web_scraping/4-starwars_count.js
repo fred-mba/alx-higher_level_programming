@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/node
 
 const req = require('request');
 const apiUrl = process.argv[2];
