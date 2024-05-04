@@ -1,4 +1,9 @@
 #!/usr/bin/node
+/**
+* A script that gets the contents of a webpage and stores it in a file
+* The file must be UTF-8 encoded
+* apiUrl: http://loripsum.net/api
+*/
 
 const fileSystem = require('fs');
 const req = require('request');
