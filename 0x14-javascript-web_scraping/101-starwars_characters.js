@@ -1,5 +1,9 @@
 #!/usr/bin/node
-// Displays one character name by line in the same order of the list “characters” in the /films/ response
+/**
+ * A script that prints all characters of a Star Wars movie
+ * The first argument is the Movie ID - example: 3 = “Return of the Jedi”
+ * Displays one character name by line in the same order of the list “characters” in the /films/ response
+ */
 
 const req = require('request');
 const movieId = process.argv[2];
