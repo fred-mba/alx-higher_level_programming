@@ -1,4 +1,5 @@
 #!/usr/bin/node
+/* Ascript that display the status code of a GET request */
 
 const req = require('request');
 
