@@ -17,7 +17,7 @@ req(url, (error, response, body) => {
     if (todo.completed) {
       const userId = todo.userId;
       if (tasksCompleted[userId]) {
-        tasksCompleted[userId] +=1;
+        tasksCompleted[userId] += 1;
       } else {
         tasksCompleted[userId] = 1;
       }
