@@ -1,4 +1,9 @@
 #!/usr/bin/node
+/**
+* A script that computes the number of tasks completed by user id
+* The first argument is the API URL: https://jsonplaceholder.typicode.com/todos
+* Only print users with completed task
+*/
 
 const req = require('request');
 const url = process.argv[2];
