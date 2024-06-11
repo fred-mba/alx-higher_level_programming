@@ -54,7 +54,7 @@ D. What are the basic option flags to create tests
 
 E. How to find edge cases
 
-	Finding edge caseis essential in ensuring robustness and reliablity of a software. It is critical in understanding business rules and finding how the system interacts with external elements
+	Finding edge case is essential in ensuring robustness and reliablity of a software. It is critical in understanding business rules and finding how the system interacts with external elements
 	1. Understand the Requirements and Domain : For example, in a financial application, understand the limits on transaction amounts, currency formats, and decimal precision
 	2. Analyze Input Space: Consider the data types, ranges, and possible formats of inputs.
 	3. Think about the Extremes: 
