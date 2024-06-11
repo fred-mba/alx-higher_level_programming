@@ -2,8 +2,10 @@
 
 ### Learning Objectives
 A. What’s an interactive test
+
 	* Involves manually testing parts of a code in an interactive environment. It complements formal testing frameworks and allows developers to be more innovative during development.
 B. Why tests are important
+
 	* Ensures code functions or software meets correct results or specifies requirements
 	* Helps in early identification of bugs during development process
 	* Ensures that new code changes do not break existing functionality as the codebase grows and evolves
@@ -11,6 +13,7 @@ B. Why tests are important
 	* Ensures that new features can be safely deployed to production frequently while ensuring functionality remains intact
 	* Well-tested code helps mitigate the risks associated with deploying new sofware or changes to existing systems, reducing the chance of costly outages or data loss
 C. How to write Docstrings to create tests
+
 	* Docstrings are used to document python module, class, functions or methods of a code.
 	* Docstrings must be defined with three `double-quotes`
 	* No blank lines should be left before or after the docstring
@@ -22,6 +25,7 @@ C. How to write Docstrings to create tests
 	* Return will be defined in the same way as "Parameters"
 	
 D. What are the basic option flags to create tests
+
     Option flags provides flexible control on how test are run and how output is interpreted.
 	1. Inline using doctest
 	    a. ELLIPSIS (doctest.ELLIPSIS)
@@ -48,6 +52,7 @@ irregular whitespaces
 	    -v, -b, -f, -c -k
 
 E. How to find edge cases
+
 	Finding edge caseis essential in ensuring robustness and reliablity of a software. It is critical in understanding business rules and finding how the system interacts with external elements
 	1. Understand the Requirements and Domain : For example, in a financial application, understand the limits on transaction amounts, currency formats, and decimal precision
 	2. Analyze Input Space: Consider the data types, ranges, and possible formats of inputs.
