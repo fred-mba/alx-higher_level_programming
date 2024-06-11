@@ -34,19 +34,20 @@ D. What are the basic option flags to create tests
 		- Ignores the details of exceptions, such as error messages, and only checks for the type of exception
 	    c. NORMALIZE_WHITESPACE (doctest.NORMALIZE_WHITESPACE)
 		- Normalizes whitespace in both the expected and actual output before comparison. Useful when the output involves
-irregular whitespaces
+		irregular whitespaces
 	    d. ALLOW_UNICODE (doctest.ALLOW_UNICODE)
 		- Treats Unicode and byte strings as equivalent in the output
 	    e. SKIP (doctest.SKIP)
 		- Excludes specific tests that are not relevant or cannot be run in the current environment
 	    f. REPORT_ONLY_FIRST_FAILURE (doctest.REPORT_ONLY_FIRST_FAILURE)
-		- Stops the test run on the 1st failure and reports only that failure. Useful for focusing on the initial issue without being overwhelmed by multiple failures
+		- Stops the test run on the 1st failure and reports only that failure. Useful for focusing on the initial issue wi		thout being overwhelmed by multiple failures
 	    g. REPORT_NDIFF (doctest.REPORT_NDIFF)
 		- Makes it easier to spot the difeferences between expected and actual output.
 
-	    Usage:
+	Usage:
 		`doctest.testmod(optionflags=doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE)`
 		`python -m doctest -v my_script.py -o ELLIPSIS -o NORMALIZE_WHITESPACE`
+
 	2. Command line
 	    python -m unittest
 	    -v, -b, -f, -c -k
