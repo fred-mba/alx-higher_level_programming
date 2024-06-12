@@ -52,9 +52,3 @@ of integers/floats")
         result.append(new_row)
 
     return result
-
-
-if __name__ == "__main__":
-    doctest.testmod(
-        optionflags=doctest.ELLIPSIS | doctest.IGNORE_EXCEPTION_DETAIL
-    )
