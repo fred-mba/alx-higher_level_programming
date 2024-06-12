@@ -28,10 +28,10 @@ def matrix_divided(matrix, div):
     # Check if matrix is a list of lists
     if not isinstance(matrix, list) or len(matrix) == 0:
         raise TypeError("matrix must be a matrix (list of lists) \
-        of integers/floats")
+of integers/floats")
     if not all(isinstance(row, list) and len(row) > 0 for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) \
-        of integers/floats")
+of integers/floats")
 
     row_length = len(matrix[0])
     for row in matrix:
@@ -45,10 +45,16 @@ def matrix_divided(matrix, div):
         for element in row:
             if not isinstance(element, (int, float)):
                 raise TypeError("matrix must be a matrix (list of lists) \
-                of integers/floats")
+of integers/floats")
             divided_element = element / div
             rounded_element = round(divided_element, 2)
             new_row.append(rounded_element)
         result.append(new_row)
 
     return result
+
+
+if __name__ == "__main__":
+    doctest.testmod(
+        optionflags=doctest.ELLIPSIS | doctest.IGNORE_EXCEPTION_DETAIL
+    )
