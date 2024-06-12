@@ -21,16 +21,13 @@ def text_indentation(text):
 
     special_char = ['.', '?', ':']
     sentence_line = ""
-    result = ""
 
     for character in text:
         sentence_line += character
         if character in special_char:
-            result += sentence_line.strip() + "\n\n"
-            #print(sentence_line.strip())
-            #print()
+            print(sentence_line.strip())
+            print()
             sentence_line = ""
 
     if sentence_line:
-        result += sentence_line.strip()
-    print(result)
+        print(sentence_line.strip())
