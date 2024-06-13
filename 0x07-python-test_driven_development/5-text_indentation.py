@@ -27,7 +27,7 @@ def text_indentation(text):
         if character in special_char:
             print(sentence_line.strip())
             print()
-            sentence_line = "" # Reset sentence_line after printing
+            sentence_line = ""  # Reset sentence_line after printing
 
     if sentence_line.strip():
         print(sentence_line.strip())
