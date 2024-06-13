@@ -51,3 +51,21 @@ Once again
 Traceback (most recent call last):
 ...
 TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation("  Leading and trailing spaces should be trimmed.  ")
+Leading and trailing spaces should be trimmed.
+<BLANKLINE>
+>>> text_indentation("Multiple special characters!?.. ::::")
+Multiple special characters!?
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+<BLANKLINE>
