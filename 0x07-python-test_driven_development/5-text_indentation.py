@@ -21,6 +21,7 @@ def text_indentation(text):
 
     special_char = ['.', '?', ':']
     sentence_line = ""
+    is_last_special = False
 
     for character in text:
         sentence_line += character
@@ -28,6 +29,12 @@ def text_indentation(text):
             print(sentence_line.strip())
             print()
             sentence_line = ""  # Reset sentence_line after printing
+            is_last_special = True
+        else:
+            is_last_special = False
 
     if sentence_line.strip():
-        print(sentence_line.strip())
+        if not is_last_special:
+            print(sentence_line.strip(), end="")
+        else:
+            print(sentence_line.strip())
