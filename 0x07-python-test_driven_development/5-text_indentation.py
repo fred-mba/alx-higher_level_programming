@@ -9,7 +9,7 @@ def text_indentation(text):
     Print a text with 2 lines after ., ?, and :.
 
     The function transverses through each character to find the stated 3
-    characters. If found, the sentence is printed out one one line followed by
+    characters. If found, the sentence is printed out one line followed by
     a new line.
 
     Parameter
@@ -27,7 +27,7 @@ def text_indentation(text):
         if character in special_char:
             print(sentence_line.strip())
             print()
-            sentence_line = ""
+            sentence_line = "" # Reset sentence_line after printing
 
-    if sentence_line:
+    if sentence_line.strip():
         print(sentence_line.strip())
