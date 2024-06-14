@@ -59,6 +59,6 @@ def lazy_matrix_mul(m_a, m_b):
 
     arr1 = np.array(m_a)
     arr2 = np.array(m_b)
-    matrix_result = np.matmul(arr1, arr2)
+    matrix_result = np.dot(arr1, arr2)
 
     return matrix_result
