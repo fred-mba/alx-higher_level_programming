@@ -34,8 +34,8 @@ def lazy_matrix_mul(m_a, m_b):
         raise TypeError("m_b must be a list of lists")
 
     if len(m_a) == 0 or any(len(row_a) == 0 for row_a in m_a):
-        raise ValueError("shapes (0,) and (2,2) not aligned: 0 \
-(dim 0) != 2 (dim 0)")
+        raise ValueError("shapes (1,0) and (2,2) not aligned: 0 \
+(dim 1) != 2 (dim 0)")
 
     if len(m_b) == 0 or any(len(row_b) == 0 for row_b in m_b):
         raise ValueError("shapes (2,2) and (1,0) not aligned: 2 \
