@@ -15,7 +15,7 @@ ValueError: Scalar operands are not allowed, use '*' instead
 >>> lazy_matrix_mul([], [[1, 2], [3, 4]])
 Traceback (most recent call last):
 ...
-ValueError: shapes (0,) and (2,2) not aligned: 0 (dim 0) != 2 (dim 0)
+ValueError: shapes (1,0) and (2,2) not aligned: 0 (dim 1) != 2 (dim 0)
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[]])
 Traceback (most recent call last):
 ...
