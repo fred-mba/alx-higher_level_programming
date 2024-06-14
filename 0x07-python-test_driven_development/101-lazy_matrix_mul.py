@@ -9,8 +9,8 @@ def lazy_matrix_mul(m_a, m_b):
     """
     Multiply 2 matrices.
 
-    This function mutiplies 2D matrices m_a & m_b using numpy. Using numpy,
-    it is intended to ease the lenghty multlication in the previous task.
+    This function mutiplies 2D matrices m_a & m_b using numpy. NumPy
+    shall ease the lengthy multlication in the previous task.
 
     Parameters
     ----------
