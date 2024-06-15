@@ -24,6 +24,7 @@
 * A variable that holds data associated with a class and to specific objects.
 
 	class Person:
+
 	def __init__(self, name, age):
 		self.name = name  # name is an attribute
 		self.age = age  # age is an attribute
