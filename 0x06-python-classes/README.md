@@ -22,22 +22,22 @@
 6. What is an attribute
 
 * A variable that holds data associated with a class and to specific objects.
+```
+class Person:
 
-	class Person:
-
-	def __init__(self, name, age):
-		self.name = name  # name is an attribute
-		self.age = age  # age is an attribute
-
+def __init__(self, name, age):
+	self.name = name  # name is an attribute
+	self.age = age  # age is an attribute
+```
 7. What are and how to use public, protected and private attributes
 
 a. **Public attributes**:
 * Are accessible from outside the class. Defined within `__init__` method without any underscores.
 
-	def __init__(self, name):
-		self.name = name  # Public attribute
-	person1 = Person("Alice")
-	print(person1.name) # Accesible: Output: Alice
+    def __init__(self, name):
+        self.name = name  # Public attribute
+    person1 = Person("Alice")
+    print(person1.name) # Accesible: Output: Alice
 
 b. **Protected attributes**:
 * Intended to be accessed within the classand its subclasses. Denoted by prefixing single underscore '_'.
