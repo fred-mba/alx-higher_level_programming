@@ -29,7 +29,6 @@ class Person:
     def __init__(self, name, age):
         self.name = name  # name is an attribute
         self.age = age  # age is an attribute
-:heavy_check_mark:
 ```
 7. **What are and how to use public, protected and private attributes**
 
@@ -40,7 +39,6 @@ def __init__(self, name):
     self.name = name  # Public attribute
 person1 = Person("Alice")
 print(person1.name) # Accesible: Output: Alice
-:heavy_check_mark:
 ```
 b. **Protected attributes**:
 * Intended to be accessed within the class and its subclasses. Denoted by prefixing single underscore.
@@ -57,7 +55,6 @@ class Employee(Person):
         return(f"{self._name}, {self._age}, {self._position}")
 emp = Employee("Alice", 30, "manager")
 print(emp.get_details())  # Output: Alice, 30, manager
-:heavy_check_mark:
 ```
 c. **Private attributes**:
 * Are intended to be hidden from outside access and typically used to implement encapsulation. Denoted by double underscores.
@@ -70,7 +67,6 @@ class Person:
         return self.__age
 person1 = Person(30)
 print(person1.get_age)  # Accessible through method: Output: 30
-:heavy_check_mark:
 ```
 	
 8. **What is self**
