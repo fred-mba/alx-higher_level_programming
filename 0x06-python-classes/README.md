@@ -2,7 +2,7 @@
 
 ### Learning Objectives
 1. **Why Python programming is awesome**
-* Being an OOP, it provides clean and easy to understand, promoting quick development
+* Being an OOP, it provides clean and easy way to understand, promoting quick development
 
 2. **What is OOP**
 * A programming technique/paradigm based on the concept of `objects` which stores data.
@@ -18,7 +18,7 @@ person1 = Person("Alice", 30) #person1 is an instance of the Person class
 ```
 
 5. **What is the difference between a class and an object/instance**
-* __Class__ is the blueprint for creating objects. It defines the object structure and behaviors while __object/instance__ is a specific realization/implementation of a class. It represents the actual values for the attributes defined by the class.
+* ***Class*** is the blueprint for creating objects. It defines the object structure and behaviors while __object/instance__ is the specific realization/implementation of a class. It represents the actual values for the attributes defined by the class.
 
 6. **What is an attribute**
 
@@ -41,7 +41,7 @@ person1 = Person("Alice")
 print(person1.name) # Accesible: Output: Alice
 ```
 b. **Protected attributes**:
-* Intended to be accessed within the classand its subclasses. Denoted by prefixing single underscore.
+* Intended to be accessed within the class and its subclasses. Denoted by prefixing single underscore.
 ```
 class Person:
     def __init__(self, name, age):
@@ -69,13 +69,13 @@ person1 = Person(30)
 print(person1.get_age)  # Accessible through method: Output: 30
 ```
 	
-8. What is self
+8. **What is self**
 * Allows an object to refer to itself just as 'my'. Used to access variables and methods within the instance.
 
-9. What is a method
+9. **What is a method**
 * Function defined within a class that describes the behavior of an object.
 
-10. What is the special `__init__` method and how to use it
+10. **What is the special `__init__` method and how to use it**
 * It is a special method that initializes the object's attributes with the given values. Also called a constructor in other high level programming languages.
 
 - What is Data Abstraction, Data Encapsulation, and Information Hiding
@@ -93,4 +93,3 @@ print(person1.get_age)  # Accessible through method: Output: 30
 - [Properties vs. Getters and Setters](https://python-course.eu/oop/properties-vs-getters-and-setters.php)
 - [Python Classes and Objects](https://www.youtube.com/watch?v=apACNr7DC_s)
 - [Learn to Program 9 : Object Oriented Programming](https://www.youtube.com/watch?v=1AGyBuVCTeE)
-
