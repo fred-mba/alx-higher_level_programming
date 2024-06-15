@@ -1,8 +1,8 @@
-## Python - Classes and Objects## Python - Classes and Objects
+## Python - Classes and Objects
 
 ### Learning Objectives
 1. **Why Python programming is awesome**
-* Being an OOP, it provides clean and easy way to understand, promoting quick development
+* Being an OOP language, it provides clean and easy way to understand codes, promoting quick development
 
 2. **What is OOP**
 * A programming technique/paradigm based on the concept of `objects` which stores data.
@@ -29,6 +29,7 @@ class Person:
     def __init__(self, name, age):
         self.name = name  # name is an attribute
         self.age = age  # age is an attribute
+:heavy_check_mark:
 ```
 7. **What are and how to use public, protected and private attributes**
 
@@ -39,6 +40,7 @@ def __init__(self, name):
     self.name = name  # Public attribute
 person1 = Person("Alice")
 print(person1.name) # Accesible: Output: Alice
+:heavy_check_mark:
 ```
 b. **Protected attributes**:
 * Intended to be accessed within the class and its subclasses. Denoted by prefixing single underscore.
@@ -55,6 +57,7 @@ class Employee(Person):
         return(f"{self._name}, {self._age}, {self._position}")
 emp = Employee("Alice", 30, "manager")
 print(emp.get_details())  # Output: Alice, 30, manager
+:heavy_check_mark:
 ```
 c. **Private attributes**:
 * Are intended to be hidden from outside access and typically used to implement encapsulation. Denoted by double underscores.
@@ -67,6 +70,7 @@ class Person:
         return self.__age
 person1 = Person(30)
 print(person1.get_age)  # Accessible through method: Output: 30
+:heavy_check_mark:
 ```
 	
 8. **What is self**
@@ -78,15 +82,15 @@ print(person1.get_age)  # Accessible through method: Output: 30
 10. **What is the special `__init__` method and how to use it**
 * It is a special method that initializes the object's attributes with the given values. Also called a constructor in other high level programming languages.
 
-- What is Data Abstraction, Data Encapsulation, and Information Hiding
-- What is a property
-- What is the difference between an attribute and a property in Python
-- What is the Pythonic way to write getters and setters in Python
-- How to dynamically create arbitrary new attributes for existing instances of a class
-- How to bind attributes to object and classes
-- What is the `__dict__` of a class and/or instance of a class and what does it contain
-- How does Python find the attributes of an object or class
-- How to use the getattr function
+11. What is Data Abstraction, Data Encapsulation, and Information Hiding
+12. What is a property
+13. What is the difference between an attribute and a property in Python
+14. What is the Pythonic way to write getters and setters in Python
+15. How to dynamically create arbitrary new attributes for existing instances of a class
+16. How to bind attributes to object and classes
+17. What is the `__dict__` of a class and/or instance of a class and what does it contain
+18. How does Python find the attributes of an object or class
+19. How to use the getattr function
 
 ### References
 - [Object Oriented Programming](https://python.swaroopch.com/oop.html)
