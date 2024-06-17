@@ -78,7 +78,7 @@ print(person1.get_age)  # Accessible through method: Output: 30
 ```
 	
 8. **What is self**
-* Allows an object to refer to itself just as 'my'. Used to access variables and methods within the instance.
+* Allows an object to refer to itself just as "my". Used to access variables and methods within the instance.
 
 9. **What is a method**
 * These are special functions defined within a class which controls the access to the data protected by a shell.
@@ -86,14 +86,15 @@ print(person1.get_age)  # Accessible through method: Output: 30
 10. **What is the special `__init__` method and how to use it**
 * It is a special method used to initialize an instance. Also called a constructor in other high level programming languages.
 
-11. What is Data Abstraction, Data Encapsulation, and Information Hiding
+11. **What is Data Abstraction, Data Encapsulation, and Information Hiding**
+
 a. __Data Encapsulation__: Wrapping data and methods that work on data within a class. This restricts access to variables and methods to prevent accidental modification of data. _Setter_ are in this case used for changing data while _getters_ for retriving the data.
 b. __Information Hiding__: Restricting direct access to certain details of an object, typically by using a private attribute.
 c. __Data Abstraction__: The concept of providing only essentials and hiding the implementation details. For example, in a banking application, you might interact with an account object through methods like deposit() and withdraw(), without knowing how the system manages these processes internally.
 
 `Data Abstraction = Data Encapsulation + Data Hiding`
 
-12. What is a property
+12. **What is a property**
 * Allows you to define methods in a class that can be accessed like attributes.
 ```
 class Employee:
@@ -117,12 +118,13 @@ print(emp.get_salary)  # Access as an attribute: Output: 50000
 emp.set_salary = 60000  # Modify using setter method
 print(emp.get_salary)  # Output: 60000
 ```
-13. What is the difference between an attribute and a property in Python
-* ***Attribute*** is variable defined in a class that holds data. It can be accessed directly while property is a special kind of attribute that allows custom access control. It is accessed like an attribute but can have getter, setter, and deleter methods to control its value.
+13. **What is the difference between an attribute and a property in Python**
+* ***Attribute*** is variable defined in a class that holds data. It can be accessed directly while ***property*** is a special kind of attribute that allows custom access control. It is accessed like an attribute but can have getter, setter, and deleter methods to control its value.
 
-14. How to dynamically create arbitrary new attributes for existing instances of a class
+14. **How to dynamically create arbitrary new attributes for existing instances of a class**
 * You can add new attributes to an instance at runtime as in this example:
-``class Car:
+```
+class Car:
     def __init__(self, brand):
         self.brand = brand
 my_car = Car("Toyota")
@@ -130,8 +132,8 @@ print(my_car.__dict__)` # Output: {'brand': 'Toyota'}
 my_car.color = "Red"
 print(my_car.__dict__)` # Output after adding color attribute: {'brand': 'Toyota', 'color': 'Red'}
 ```
-15. How to bind attributes to object and classes
-* Attributes ae bind to objects and classes using '.'
+15. **How to bind attributes to object and classes**
+* Attributes are bind to objects and classes using '.'
 ```
 class Car:
     wheels = 4  # Class attribute
@@ -147,10 +149,10 @@ print(my_car.brand)  # Access instance attribute: Output: Toyota
 print(your_car.brand)  # Access instance attribute: Output: Honda
 
 ```
-16. What is the `__dict__` of a class and/or instance of a class and what does it contain
+16. **What is the `__dict__` of a class and/or instance of a class and what does it contain**
 * The `__dict__` attribute in Python is a dictionary that stores an object's/class's writable attributes
 
-17. How does Python find the attributes of an object or class
+17. **How does Python find the attributes of an object or class**
 * Python uses a lookup mechanism that searches through the class's `__dict__`, the instance's `__dict__`, and any parent classes in the method resolution order (MRO) to find attributes and methods.
 
 ```
