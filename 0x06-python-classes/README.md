@@ -89,7 +89,9 @@ print(person1.get_age)  # Accessible through method: Output: 30
 11. **What is Data Abstraction, Data Encapsulation, and Information Hiding**
 
 a. __Data Encapsulation__: Wrapping data and methods that work on data within a class. This restricts access to variables and methods to prevent accidental modification of data. _Setter_ are in this case used for changing data while _getters_ for retriving the data.
+
 b. __Information Hiding__: Restricting direct access to certain details of an object, typically by using a private attribute.
+
 c. __Data Abstraction__: The concept of providing only essentials and hiding the implementation details. For example, in a banking application, you might interact with an account object through methods like deposit() and withdraw(), without knowing how the system manages these processes internally.
 
 `Data Abstraction = Data Encapsulation + Data Hiding`
