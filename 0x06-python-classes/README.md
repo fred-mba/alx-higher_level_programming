@@ -95,7 +95,31 @@ c. __Data Abstraction__: The concept of providing only essentials and hiding the
 `Data Abstraction = Data Encapsulation + Data Hiding`
 
 12. **What is a property**
-* Allows you to define methods in a class that can be accessed like attributes.
+* A special kind of an attribute that define methods in a class, define custom when accessing, modifying, or deleting instance data. They are used to encapsulate and validate data and maintain the existing code.
+```
+class MyClass:
+    def __init__(self):
+        self._x = 0
+    
+    @property
+    def x(self):
+        print("Getting x")
+        return self._x
+    
+    @x.setter
+    def x(self, value):
+        if value < 0:
+            raise ValueError("Value must be non-negative")
+        print("Setting x")
+        self._x = value
+    
+    @x.deleter
+    def x(self):
+        print("Deleting x")
+        del self._x
+
+```
+
 ```
 class Employee:
     def __init__(self, name, salary):
@@ -103,20 +127,20 @@ class Employee:
         self.__salary = salary
 
     @property
-    def get_salary(self):
+    def employee_salary(self):
         return self.__salary
 
-    @get_salary.setter
-    def set_salary(self, amount):
+    @employee_salary.setter
+    def employee_salary(self, amount):
         if amount >= 0:
             self.__salary = amount
         else:
             raise ValueError("Salary must be positive")
 
-emp = Employee("John", 50000)
-print(emp.get_salary)  # Access as an attribute: Output: 50000
-emp.set_salary = 60000  # Modify using setter method
-print(emp.get_salary)  # Output: 60000
+emp = Employee("John", 50000) # setting John and 50000
+print(emp.employee_salary)  # Access as an attribute: Output: 50000
+emp.employee_salary = 60000  # Modify using setter method
+print(emp.employee_salary)  # Output: 60000
 ```
 13. **What is the difference between an attribute and a property in Python**
 * ***Attribute*** is variable defined in a class that holds data. It can be accessed directly while ***property*** is a special kind of attribute that allows custom access control. It is accessed like an attribute but can have getter, setter, and deleter methods to control its value.
