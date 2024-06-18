@@ -2,13 +2,14 @@
 """
 A python class module extacted from a Bytecode
 """
+import math
 
 
 class MagicClass:
 
     """A class that computes the radius and circumference of a circle"""
 
-    def __ini__(self, radius=0):
+    def __init__(self, radius=0):
 
         if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius must be a number")
