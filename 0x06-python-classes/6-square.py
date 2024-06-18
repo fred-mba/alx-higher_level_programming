@@ -48,7 +48,7 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             print("")
-            return # stop further execution if sixe is zero
+            return  # stop further execution if sixe is zero
 
         for i in range(self.__position[1]):
             print("")
