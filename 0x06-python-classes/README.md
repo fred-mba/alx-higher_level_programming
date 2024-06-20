@@ -97,7 +97,7 @@ c. __Data Abstraction__: The concept of providing only essentials and hiding the
 `Data Abstraction = Data Encapsulation + Data Hiding`
 
 12. **What is a property**
-* A special kind of an attribute that define methods in a class, define custom when accessing, modifying, or deleting instance data. They are used to encapsulate and validate data and maintain the existing code.
+* A special kind of an attribute that define methods in a class, define custom when accessing, modifying, or deleting instance data. They are used to encapsulate and validate data and maintain the existing code. Properties help us access methods like an [attribute](https://www.youtube.com/watch?v=jCzT9XFZ5bw) without breaking the code.
 ```
 class MyClass:
     def __init__(self):
@@ -192,6 +192,8 @@ b = B()
 print(b.x)  # Output: 5, found in class A through inheritance
 ```
 18. [How to use the getattr function](https://www.digitalocean.com/community/tutorials/python-getattr)
+* If the attribute is found through the normal mechanism, 'get attribute' is not called, instead python calls a special attribute, 
+[\_\_getattribute\_\_](https://www.youtube.com/watch?v=IkWrlRei0uA&t=8s)
 
 ### References
 - [Object Oriented Programming](https://python-course.eu/oop/object-oriented-programming.php)
