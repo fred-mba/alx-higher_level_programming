@@ -193,7 +193,7 @@ print(b.x)  # Output: 5, found in class A through inheritance
 ```
 18. [How to use the getattr function](https://www.digitalocean.com/community/tutorials/python-getattr)
 * If the attribute is found through the normal mechanism, 'get attribute' is not called, instead python calls a special attribute, 
-[\__getattribute__](https://www.youtube.com/watch?v=IkWrlRei0uA&t=8s)
+[\__\getattribute\__](https://www.youtube.com/watch?v=IkWrlRei0uA&t=8s)
 
 ### References
 - [Object Oriented Programming](https://python-course.eu/oop/object-oriented-programming.php)
