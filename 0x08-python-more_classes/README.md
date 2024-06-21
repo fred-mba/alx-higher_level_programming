@@ -45,7 +45,7 @@ Class Method vs Static Method
 * Class method can access or modify the class state while a static method can't
 * Class methods take `cls` as the first parameter
 * Class methods are used to create factory methods that return class objects.
-* Static methods are used to create utility functions.
+* [Static methods](https://www.youtube.com/watch?v=rq8cL2XMM5M) are used to create utility functions.
 ```
 """use of class method and static method""".
 from datetime import date
