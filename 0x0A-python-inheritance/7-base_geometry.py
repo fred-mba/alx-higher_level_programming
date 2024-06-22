@@ -8,7 +8,7 @@ A BaseGeometry class with public instance methods:
 
 class BaseGeometry:
 
-    # A BaseGeometry class
+    """A BaseGeometry class """
 
     def area(self):
         raise Exception("area() is not implemented")
