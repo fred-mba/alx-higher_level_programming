@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A BaseGeometry class module
+A Rectangle subclass module
 """
 
 
