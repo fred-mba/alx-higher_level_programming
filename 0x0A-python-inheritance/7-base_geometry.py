@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""
-A BaseGeometry class with public instance methods:
-    area(): returns an exception
-    integer_validator(): validates the value type
-"""
+"""A BaseGeometry class"""
 
 
 class BaseGeometry:
 
-    """A BaseGeometry class """
+    """
+    A BaseGeometry class with public instance methods:
+    area(): returns an exception
+    integer_validator(): validates if value passed to name is
+                an exact data type or greater than 0
+    """
 
     def area(self):
         raise Exception("area() is not implemented")
