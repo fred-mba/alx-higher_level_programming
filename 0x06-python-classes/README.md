@@ -4,10 +4,10 @@
 1. **What is an object and an instance**
 * An Object in python is an instance of a class that represents a class and holds specific data(attributes) and behavior(methods) defined by the class.
 
-**Characteristics if Objects**
-i. _State_: represented by attributes(data)
-ii. _Behavior_: represented by methods(functions)
-iii. _Identity_: Unique name or identifier for an object
+**Characteristics if Objects**  
+i. _State_: represented by attributes(data)  
+ii. _Behavior_: represented by methods(functions)  
+iii. _Identity_: Unique name or identifier for an object  
 
 * An instance is an individual object of a class which has unique values for its attributes
 
@@ -30,7 +30,7 @@ Example:
 
 3. **First-Class everything**
 * The principle means that everything in Python - functions, classes, modules, and even instances - are treated as objects
-- This means you:
+- This means you:  
 a) Can _assign_ functions and classes to variables  
 b) Pass them as _arguments_ to other functions  
 c) Can _return_ them from functions  
@@ -47,9 +47,9 @@ d) Can _store_ them in data structures like lists and dictionaries
 
 * A variable that stores data associated within a class or specific objects.
 
-**Types of Attributes**
-i) Instance Atrributes: Defined in the `__init__` constructor. Each instance has unique values.
-ii) Class Attributes: Defined outside `__init__` constructor, belongs to the class itself, and shared across all objects.
+**Types of Attributes**  
+i) _Instance Atrributes_: Defined in the `__init__` constructor. Each instance has unique values.  
+ii) _Class Attributes_: Defined outside `__init__` constructor, belongs to the class itself, and shared across all objects.  
 ```
 class Car:
     wheels = 4  # class attribute
