@@ -31,10 +31,10 @@ Example:
 3. **First-Class everything**
 * The principle means that everything in Python - functions, classes, modules, and even instances - are treated as objects
 - This means you:
-a) Can _assign_ functions and classes to variables
-b) Pass them as _arguments_ to other functions
-c) Can _return_ them from functions
-d) Can _store_ them in data structures like lists and dictionaries
+a) Can _assign_ functions and classes to variables  
+b) Pass them as _arguments_ to other functions  
+c) Can _return_ them from functions  
+d) Can _store_ them in data structures like lists and dictionaries  
 
 4. **What is a class**
 * A class is a blueprint/recipe for creating objects, defining the shared attributes(variables) and behaviors(methods) that all objects of that class will have.
