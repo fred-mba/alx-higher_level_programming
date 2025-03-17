@@ -1,44 +1,80 @@
 ## Python - Classes and Objects
 
 ### Learning Objectives
-1. **Why Python programming is awesome**
-* Being an OOP language, it provides clean and easy way to understand codes, promoting quick development
+1. **What is an object and an instance**
+* An Object in python is an instance of a class that represents a class and holds specific data(attributes) and behavior(methods) defined by the class.
 
-2. **What is OOP**
-* A programming technique/paradigm based on the concept of `objects` which stores data.
+**Characteristics if Objects**
+i. _State_: represented by attributes(data)
+ii. _Behavior_: represented by methods(functions)
+iii. _Identity_: Unique name or identifier for an object
 
-3. **What is a class**
-* One of the main aspect of OOP that defines a set of attributes and methods that the object will have.
-
-4. **What is an object and an instance**
-* Object in python is an instance of a class that represents a class and holds specific data(attributes) and methods(behavior) defined by the class.
 * An instance is an individual object of a class which has unique values for its attributes
 
-`person1 = Person("Alice", 30) #person1 is an instance of the Person class`
+```
+class Dog:
+    def __init__(self, name):
+        self.name = name # name is an attribute(state)
+    def bark(self):   # behavior(method)
+        print(f"{self.name} says woof!")
+
+Example:
+    my_dog = Dog("Buddy") # my_dog is an object of the Dog class
+    another_dog = Dog("Buddy")
+    print(another_dog == my_dog) # prints False since despite the two dog objects have same name, they are two different instances
+```
+
+2. **What is OOP**
+* A programming technique/a way to structure programs by combining data(attributes) and behavior(methods) into objects.
+* It enhances enhances code reusability through inheritance and makes it easier to manage and maintain large codebases.
+
+3. **First-Class everything**
+* The principle means that everything in Python - functions, classes, modules, and even instances - are treated as objects
+- This means you:
+a) Can _assign_ functions and classes to variables
+b) Pass them as _arguments_ to other functions
+c) Can _return_ them from functions
+d) Can _store_ them in data structures like lists and dictionaries
+
+4. **What is a class**
+* A class is a blueprint/recipe for creating objects, defining the shared attributes(variables) and behaviors(methods) that all objects of that class will have.
+* It encapsultes data and behavoir into a single unit, providing modularity and reusability..
 
 5. **What is the difference between a class and an object/instance**
 * ***Class*** is the blueprint for creating objects. It defines the object structure and behaviors while __object/instance__ is the specific realization/implementation of a class. It represents the actual values for the attributes defined by the class.
 * In an analogy of a physical library, the library can be regarded as a class and a book is an instance/object of this class.
 6. **What is an attribute**
 
-* A variable that holds data associated within a class and to specific objects. Created by joining an arbitrary name to the instance name separated by a dot `.`
+* A variable that stores data associated within a class or specific objects.
+
+**Types of Attributes**
+i) Instance Atrributes: Defined in the `__init__` constructor. Each instance has unique values.
+ii) Class Attributes: Defined outside `__init__` constructor, belongs to the class itself, and shared across all objects.
 ```
-class Person:
+class Car:
+    wheels = 4  # class attribute
 
-    pass
+    def __init__(self, brand, model):
+        self.brand = brand  # instance attribute
+        self.model = model  # instance attribute
 
-student = Person()
-print(student.__dict__)  # Before data storage. Output: {}
-student.name = "Jane Doe"
+car1 = Car("Toyota", "Corolla")
+car2 = Car("Honda", "Civic")
+print(car1.brand)  # Output: Toyota
+print(car2. model) # Output: Civic
 
-print(student.name)  #Output: Jane Doe
-print(student.__dict__)  # After storing data. Output: {'name': 'Jane Doe'}
+print(car1.wheels) # Output: 4
+print(car2.wheels) # Output: 4
+
 ```
-* If you try to access student.name, Python checks first, if "name" is a key of the student. __dict__ dictionary. If it is, thr value is retrived, if not, it checks if "name" is a key of the Person. __dict__.
-
-* If an attribute name is not in included in either of the dictionary, the attribute name is not defined. If you try to access a non-existing attribute, python will raise an AttributeError.
 
 7. **What are and how to use public, protected and private attributes**
+
+| Attribute type | Syntax            | Access Level |
+|----------------|:-------------------:|--------------|
+| Public         | `self.attribute`  | Can be accessed and modified anywhere       |
+| Protected      | `self._attribute` | Should be treated as internal but can still be accessed       |
+| Private        | `self.__attribute`| Cannot be accessed directly outside the class       |
 
 a. **Public attributes**:
 * Are accessible from outside the class. Defined within `__init__` method without any underscores.
@@ -57,15 +93,17 @@ class Person:
         self._age = age
 class Employee(Person):
     def __init__(self, name, age, position):
-        super().__init__(name, age):
-        self.position = position
+        super().__init__(name, age)
+        self._position = position
     def get_details(self):
         return(f"{self._name}, {self._age}, {self._position}")
 emp = Employee("Alice", 30, "manager")
 print(emp.get_details())  # Output: Alice, 30, manager
 ```
 c. **Private attributes**:
-* Are intended to be hidden from outside access and typically used to implement encapsulation. Denoted by double underscores.
+* Are intended to hide certain data or methods from outside access and typically used to implement strict encapsulation. Denoted by double underscores.
+* They are not even accessible to subclasses.
+* Can be accessed/modified through public or protected methods(e.g getters and setters)
 * Can be accessed/modified indirectly within the class through methods
 ```
 class Person:
@@ -82,6 +120,12 @@ print(person1.get_age)  # Accessible through method: Output: 30
 
 9. **What is a method**
 * These are special functions defined within a class which controls the access to the data protected by a shell.
+**Types of methods**
+Method Type     | Definition   | Example
+----------------|:------------:|--------
+Instance Method | Operates on a specific object using `self`. |  `def greet(self):`
+Class Method    | Works at the class level, not an instance. | Uses `@classmethod` and `cls`. | `def from_string(cls, data):`
+Static Method   | A function inside a class, but doesn’t use self or cls. Uses `@staticmethod`. | def `utility_function():`
 
 10. **What is the special `__init__` method and how to use it**
 * It is a special method used to initialize an instance. Also called a constructor in other high level programming languages.
@@ -194,6 +238,9 @@ print(b.x)  # Output: 5, found in class A through inheritance
 18. [How to use the getattr function](https://www.digitalocean.com/community/tutorials/python-getattr)
 * If the attribute is found through the normal mechanism, 'get attribute' is not called, instead python calls a special attribute, 
 [\_\_getattribute\_\_](https://www.youtube.com/watch?v=IkWrlRei0uA&t=8s)
+
+18. **Why Python programming is awesome**
+* Being an OOP language, it provides clean and easy way to understand codes, promoting quick development
 
 ### References
 - [Object Oriented Programming](https://python-course.eu/oop/object-oriented-programming.php)
