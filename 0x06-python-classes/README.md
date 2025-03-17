@@ -121,11 +121,12 @@ print(person1.get_age)  # Accessible through method: Output: 30
 9. **What is a method**
 * These are special functions defined within a class which controls the access to the data protected by a shell.
 **Types of methods**
-Method Type     | Definition                                  | Example |
-----------------|:-------------------------------------------:|---------|
-Instance Method | Operates on a specific object using `self`. |  `def greet(self):` |
-Class Method    | Works at the class level, not an instance.  | Uses `@classmethod` and `cls`. | `def from_string(cls, data):`|
-Static Method   | A function inside a class, but doesn’t use self or cls. Uses `@staticmethod`. | def `utility_function():`|
+
+| Method Type     | Definition                                                  | Example                        |
+|----------------|-------------------------------------------------------------|--------------------------------|
+| Instance Method | Operates on a specific object using `self`.                | `def greet(self):`            |
+| Class Method    | Works at the class level, not an instance. Uses `@classmethod` and `cls`. | `def from_string(cls, data):` |
+| Static Method   | A function inside a class, but doesn’t use `self` or `cls`. Uses `@staticmethod`. | `def utility_function():` |
 
 10. **What is the special `__init__` method and how to use it**
 * It is a special method used to initialize an instance. Also called a constructor in other high level programming languages.
