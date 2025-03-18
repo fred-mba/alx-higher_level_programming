@@ -192,11 +192,12 @@ emp.employee_salary = 60000  # Modify using setter method
 print(emp.employee_salary)  # Output: 60000
 ```
 13. **What is the difference between an attribute and a property in Python**
-| Feature        | Attribute                              | Property     |
-|----------------|:--------------------------------------:|--------------|
-| Definition     | A simple variable stored in an object  | A special method controlling access to an attribute       |
-| Access         | Direct (`obj.attribute`)                | Uses getter and setter methods       |
-| Modification   | Directly assignable (`obj.attribute = value`) | Uses `@property` and `@property.setter` for validation       |
+| Feature       | Attribute                              | Property                                        |
+|--------------|--------------------------------------|------------------------------------------------|
+| Definition   | A variable stored in an object      | A special method controlling access to an attribute |
+| Access       | Direct (`obj.attribute`)            | Accessed like an attribute but internally calls getter and setter methods (`obj.property`) |
+| Modification | Directly assignable (`obj.attribute = value`) | Uses `@property` and `@property.setter` to control modifications |
+
 
 14. **How to dynamically create arbitrary new attributes for existing instances of a class**
 * You can add new attributes to an instance at runtime as in this example:
