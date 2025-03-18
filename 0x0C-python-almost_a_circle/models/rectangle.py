@@ -65,6 +65,7 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """Prints # character in stdout based on rectangular size"""
         for w in range(self.__width):
             for h in range(self.__height):
                 print('#', end='')
