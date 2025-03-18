@@ -129,15 +129,17 @@ print(person1.get_age)  # Accessible through method: Output: 30
 | Static Method   | A function inside a class, but doesn’t use `self` or `cls`. Uses `@staticmethod`. | `def utility_function():` |
 
 10. **What is the special `__init__` method and how to use it**
-* It is a special method used to initialize an instance. Also called a constructor in other high level programming languages.
+* It is a special method used to initialize an instance.
+* Called automatically when you create an instance of the class.
 
 11. **What is Data Abstraction, Data Encapsulation, and Information Hiding**
 
-a. __Data Encapsulation__: Wrapping data and methods that work on data within a class. This restricts access to variables and methods to prevent accidental modification of data. _Setter_ are in this case used for changing data while _getters_ for retriving the data.
+a. __Data Encapsulation__: Wrapping data and methods that work on data within a class. This restricts access to variables and methods to prevent accidental modification of data.
+* When you create a class in Python, you are actually implementing encapsulation.
 
-b. __Information Hiding__: Restricting direct access to certain details of an object, typically by using a private attribute.
+b. __Information Hiding__: It is the specific aspect of encapsulation that focuses on restricting direct access to certain details of an object, typically by using a private attribute.
 
-c. __Data Abstraction__: The concept of providing only essentials and hiding the implementation details. For example, in a banking application, you might interact with an account object through methods like deposit() and withdraw(), without knowing how the system manages these processes internally.
+c. __Data Abstraction__: The concept of providing only essentials and hiding the implementation details. For example, in a banking application, you might interact with an account object through methods like deposit() and withdraw(), without knowing how the system manages these processes internally.  
 
 `Data Abstraction = Data Encapsulation + Data Hiding`
 
@@ -190,7 +192,11 @@ emp.employee_salary = 60000  # Modify using setter method
 print(emp.employee_salary)  # Output: 60000
 ```
 13. **What is the difference between an attribute and a property in Python**
-* ***Attribute*** is variable defined in a class that holds data. It can be accessed directly while ***property*** is a special kind of attribute that allows custom access control. It is accessed like an attribute but can have getter, setter, and deleter methods to control its value.
+| Feature        | Attribute                              | Property     |
+|----------------|:--------------------------------------:|--------------|
+| Definition     | A simple variable stored in an object  | A special method controlling access to an attribute       |
+| Access         | Direct (`obj.attribute`)                | Uses getter and setter methods       |
+| Modification   | Directly assignable (`obj.attribute = value`) | Uses `@property` and `@property.setter` for validation       |
 
 14. **How to dynamically create arbitrary new attributes for existing instances of a class**
 * You can add new attributes to an instance at runtime as in this example:
