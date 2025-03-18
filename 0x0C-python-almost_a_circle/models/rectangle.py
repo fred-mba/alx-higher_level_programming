@@ -38,6 +38,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Horizontal shift getter"""
         return self.__x
 
     @x.setter
@@ -50,6 +51,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Vertical shift getter"""
         return self.__y
 
     @y.setter
@@ -66,10 +68,9 @@ class Rectangle(Base):
 
     def display(self):
         """Prints # character in stdout based on rectangular size"""
-        for h in range(self.__height):
-            for w in range(self.__width):
-                print('#', end='')
-            print()
+        print("\n" * self.__y, end="")
+        for _ in range(self.__height):
+            print(" " * self.__x + '#' * self.__width)
 
     def __str__(self):
         """Defines how the Rectangle object is represented in human-readable"""
