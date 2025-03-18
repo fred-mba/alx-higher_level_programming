@@ -192,10 +192,11 @@ emp.employee_salary = 60000  # Modify using setter method
 print(emp.employee_salary)  # Output: 60000
 ```
 13. **What is the difference between an attribute and a property in Python**
-| Feature       | Attribute                              | Property                                        |
-|--------------|--------------------------------------|------------------------------------------------|
-| Definition   | A variable stored in an object      | A special method controlling access to an attribute |
-| Access       | Direct (`obj.attribute`)            | Accessed like an attribute but internally calls getter and setter methods (`obj.property`) |
+
+| Feature       | Attribute                           | Property                                         |
+|--------------|-------------------------------------|-------------------------------------------------|
+| Definition   | A variable stored in an object     | A method controlling access to an attribute     |
+| Access       | Direct (`obj.attribute`)           | Accessed like an attribute but calls getter/setter (`obj.property`) |
 | Modification | Directly assignable (`obj.attribute = value`) | Uses `@property` and `@property.setter` to control modifications |
 
 
