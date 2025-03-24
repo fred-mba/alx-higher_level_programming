@@ -24,3 +24,16 @@ class Square(Rectangle):
     def __str__(self):
         """Return human readable Square value"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
+    def update(self, *args, **kwargs):
+        """Assigns attributes to args and kwargs"""
+        attributes = ["id", "size", "x", "y"]
+
+        for i, arg in enumerate(args):
+            if i < len(attributes):
+                setattr(self, attributes[i], arg)
+
+        if not args:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
