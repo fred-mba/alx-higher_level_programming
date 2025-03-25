@@ -29,7 +29,9 @@ class Base:
 
         list_dicts = []
 
-        if list_objs:
+        if not list_objs:
+            return []
+        else:
             for obj in list_objs:
                 dictionary = obj.to_dictionary()
                 list_dicts.append(dictionary)
@@ -37,8 +39,6 @@ class Base:
 
             with open(filename, 'w') as file:
                 file.write(json_string)
-        else:
-            return []
 
     @staticmethod
     def from_json_string(json_string):
