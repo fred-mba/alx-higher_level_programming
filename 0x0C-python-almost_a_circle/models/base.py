@@ -29,16 +29,14 @@ class Base:
 
         list_dicts = []
 
-        if not list_objs:
-            return []
-        else:
+        if list_objs:
             for obj in list_objs:
                 dictionary = obj.to_dictionary()
                 list_dicts.append(dictionary)
-            json_string = cls.to_json_string(list_dicts)
+        json_string = cls.to_json_string(list_dicts)
 
-            with open(filename, 'w') as file:
-                file.write(json_string)
+        with open(filename, 'w') as file:
+            file.write(json_string)
 
     @staticmethod
     def from_json_string(json_string):
