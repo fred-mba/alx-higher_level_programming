@@ -38,7 +38,7 @@ class Base:
             with open(filename, 'w') as file:
                 file.write(json_string)
         else:
-            return "[]"
+            return []
 
     @staticmethod
     def from_json_string(json_string):
