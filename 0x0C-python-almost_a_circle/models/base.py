@@ -21,3 +21,11 @@ class Base:
             return json.dumps(list_dictionaries)
         else:
             return "[]"
+
+    @staticmethod
+    def from_json_string(json_string):
+        """"JSON string to dictionary"""
+        if json_string:
+            return json.loads(json_string)
+        else:
+            return []
