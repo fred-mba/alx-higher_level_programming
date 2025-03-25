@@ -40,8 +40,22 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """"JSON string to dictionary"""
+        """"Returns the list of JSON string"""
         if json_string:
             return json.loads(json_string)
         else:
             return []
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes already set"""
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        else:
+            return None
+
+        dummy.update(**dictionary)
+
+        return dummy
