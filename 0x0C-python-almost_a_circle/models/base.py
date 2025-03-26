@@ -74,3 +74,34 @@ class Base:
 
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Writes JSON string to CSV file"""
+        filename = cls.__name__ + ".csv"
+
+        list_dicts = []
+
+        if list_objs:
+            for obj in list_objs:
+                dictionary = obj.to_dictionary()
+                list_dicts.append(dictionary)
+        json_string = cls.to_json_string(list_dicts)
+
+        with open(filename, 'w') as file:
+            file.write(json_string)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Returns a list of instances from a csv file"""
+        filename = cls.__name__ + ".csv"
+
+        try:
+            with open(filename, mode='r') as file:
+                json_string = file.read()
+            list_dict = cls.from_json_string(json_string)
+
+            return [cls.create(**dictionary) for dictionary in list_dict]
+
+        except FileNotFoundError:
+            return []
