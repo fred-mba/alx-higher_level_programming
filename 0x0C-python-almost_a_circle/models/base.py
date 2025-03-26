@@ -70,7 +70,7 @@ class Base:
                 json_string = file.read()
             list_dict = cls.from_json_string(json_string)
 
-            return (cls.create(**dictionary) for dictionary in list_dict)
+            return [cls.create(**dictionary) for dictionary in list_dict]
 
         except FileNotFoundError:
             return []
