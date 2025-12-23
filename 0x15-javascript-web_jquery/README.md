@@ -1,7 +1,7 @@
 ## JavaScript - Web jQuery
 
 ### Learning Objectives
-- Why JQuery make front-end programming so easy (don’t forget to tweet today, with the hashtag #ilovejquery :))
+- Why JQuery make front-end programming so easy
 - How to select HTML elements in JavaScript
 - How to select HTML elements with JQuery
 - What are differences between ID, class and tag name selectors
@@ -14,7 +14,7 @@
 
 ### Resources
 - [jQuery tutorial](https://jquery-tutorial.net/)
-- [jQuery API](https://oscarotero.com/jquery/)
+- [DOM API](https://oscarotero.com/jquery/)
 - [jQuery](https://jquery.com/)
 - [jQuery API](https://api.jquery.com/)
 - [jQuery AJAX](https://learn.jquery.com/ajax/)
